@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DETONA RALF!</title>
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+
+
+  <main class="container">
+
+    <div class="menu">
+      <div class="menu-time">
+        <h2>Time Left</h2>
+        <span>0</span>
+      </div>
+      <div class="menu-score">
+        <h2>Your score</h2>
+        <span>0</span>
+      </div>
+      <div class="menu-lives">
+        <img src="./images/pixels_heart.png" alt="lives-hearts">
+        <h2>x3</h2>
+      </div>
+    </div>
+
+    <div class="panel display-none">
+
+      <div class="panel-row">
+        <div class="square" id="1"></div>
+        <div class="square enemy" id="2"></div>
+        <div class="square" id="3"></div>
+      </div>
+
+      <div class="panel-row">
+        <div class="square" id="4"></div>
+        <div class="square" id="5"></div>
+        <div class="square" id="6"></div>
+      </div>
+
+      <div class="panel-row">
+        <div class="square" id="7"></div>
+        <div class="square" id="8"></div>
+        <div class="square" id="9"></div>
+      </div>
+
+
+    </div>
+
+    <div class="buttons display-none">
+      <button class="game-button pause-button"> pause game </button>
+      <button class="game-button quit-button to-quit-button"> quit </button>
+    </div>
+
+    <div class="intro">
+      <div class="intro-image">
+
+      </div>
+      <div class="intro-buttons">
+        <button class="game-button play-game">play game</button>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="pause-modal modal invisible">
+    <button class="game-button pause-to-quit-button"> quit game </button>
+    <button class="game-button return-button"> continue </button>
+  </div>
+  <div class="quit-modal modal invisible">
+    <h2>
+      Are you sure you would like to leave this game?
+    </h2>
+    <button class="game-button return-button"> return </button>
+    <button class="game-button quit-confirm-button quit-game"> quit </button>
+  </div>
+
+
+  <script defer src="./scripts/page-manager.js" ></script>
+  <script defer src="./scripts/modal-manager.js" ></script>
+  <script defer src="./scripts/engine.js" ></script>
+</body>
+
+</html>
