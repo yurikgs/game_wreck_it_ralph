@@ -311,11 +311,14 @@ function returnStopWatch() {
 
 // tocar música no início
 function playMainSong() {
+  // delete state.values.audios.songs.gameplay
+  // state.values.audios.songs.gameplay = new Audio('../sounds/gameplay.wav')
+  // state.values.audios.songs.gameplay.muted=true
   state.values.audios.songs.gameplay.loop = true
   state.values.audios.songs.gameplay.volume = 0.5
   state.values.audios.songs.gameplay.play()
 }
-playMainSong()
+
 
 function stopAllSounds() {
   for(const audio of Object.values(state.values.audios.effects)) {
