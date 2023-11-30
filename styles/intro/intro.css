@@ -1,0 +1,16 @@
+@import './button-colours.css';
+
+
+.intro {
+  padding-bottom: 15vh;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  align-items: center;
+}
+
+.intro-image {
+  height: 50vh;
+  width: 50vh;
+  background: #0000ff80 url('../../images/ralph.png') center bottom / contain no-repeat;
+}
