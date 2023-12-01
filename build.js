@@ -1,3 +1,11 @@
+/**
+ *  Require esbuild globally installed
+ * 
+ *  dev build: node build --watch
+ *  prd build: node build
+ * 
+ */
+
 const { execSync } = require('child_process');
 const fs = require('fs/promises');
 
@@ -18,8 +26,8 @@ async function build(watch) {
   runCommand('cp -r sounds public/sounds');
   runCommand('cp -r images public/images');
 
-console.log(watch)
-runCommand(`esbuild scripts/main.js --bundle ${watch=='--watch'?'--watch':''} --outfile=public/bundle.js --target=es6 --loader:.html=text --loader:.css=text --sourcemap`);
+
+runCommand(`esbuild scripts/main.js --bundle ${watch=='--watch'?'--watch':''} --outfile=public/bundle.js --minify --target=es6 --loader:.html=text --loader:.css=text --sourcemap`);
 }
 
 build(process.argv[2]);
