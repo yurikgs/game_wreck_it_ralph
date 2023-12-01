@@ -1,0 +1,119 @@
+@import './modals.css';
+@import './button-colours.css';
+
+.menu-time h2,
+.menu-score h2 {
+  color: #ff0000;
+  font-size: 1em;
+}
+
+.menu-time span,
+.menu-score span,
+.menu-lives h2 {
+  color: #ffffff;
+  font-size: 1em;
+}
+
+.menu-time span,
+.menu-score span {
+  display: block;
+  margin-top: 1rem;
+}
+
+.menu-lives img {
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+}
+
+.menu-lives {
+  display: flex;
+  align-items: center;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url('../../images/wall.png');
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 90px;
+  width: 100%;
+  background-color: #000000;
+  border-bottom: 2px solid #ffd700;
+}
+
+
+.panel {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  height: 30vw;
+  max-height: 130px;
+  width: 30vw;
+  max-width: 130px;
+  background-color: #7fffd4;
+  border: 1px solid #000000;
+}
+
+
+.enemy {
+  background-image: url('../../images/ralph.png');
+  background-size: cover;
+}
+
+.buttons {
+  padding-bottom: 5vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  flex-shrink: 2;
+}
+
+.game-button {
+  background-color: #808080;
+  color: white;
+  padding: 8px 16px;
+  font-size: 1.1em;
+  border-radius: 18%;
+}
+
+@media screen and (max-width:768px) {
+  .panel {
+    padding-top: 15vh;
+  }
+  .menu {
+    padding-left: 4vw;
+    padding-right: 4vw;
+    font-size: 1em;
+    gap: 5%;
+  }
+  .buttons {
+    margin-bottom: 7vh;
+    margin-top: 6vh;
+  }
+
+}
+@media screen and (max-width:500px) {
+  .menu {
+    font-size: 0.85em;
+  }
+  .buttons {
+    margin-bottom: 9vh;
+    margin-top: 12vh;
+  }
+
+}
