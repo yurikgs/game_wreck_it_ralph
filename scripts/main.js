@@ -1,6 +1,5 @@
+
 // page manager
-
-
 
 const changePage = (page) => {
 
