@@ -13,7 +13,7 @@ export function freezeStopWatch(state) {
 
 export function verifyTimeLeft(state) {
   if(state.view.timeLeft.innerText==0) {
-    gameOver()
+    gameOver(state)
   }
 }
 

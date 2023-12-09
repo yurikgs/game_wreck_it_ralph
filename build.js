@@ -20,14 +20,15 @@ function runCommand(command) {
 
 async function build(watch) {
   runCommand('rm -rf public && mkdir public');
+  runCommand('cp src/index.html public/index.html');
+  runCommand('cp -r src/styles public/styles');
+  runCommand('cp -r src/sounds public/sounds');
+  runCommand('cp -r src/images public/images');
 
-  runCommand('cp index.html public/index.html');
-  runCommand('cp -r styles public/styles');
-  runCommand('cp -r sounds public/sounds');
-  runCommand('cp -r images public/images');
 
 
-runCommand(`esbuild scripts/main.js --bundle ${watch=='--watch'?'--watch':''} --outfile=public/bundle.js --minify --target=es6 --loader:.html=text --loader:.css=text --sourcemap`);
+runCommand(`esbuild src/scripts/main.js --bundle ${watch=='--watch'?'--watch':''} --outfile=public/bundle.js ${watch=='--watch'?'':'--minify'} --target=es6 --loader:.html=text --loader:.css=text --sourcemap`);
+
 }
 
 build(process.argv[2]);

@@ -1,3 +1,8 @@
+/**
+ * 
+ *  Relatives paths here needs to be settled as in the final built folder
+ */
+
 import { initGame } from "./game-manager"
 
 export function playGame () {
@@ -18,14 +23,15 @@ export function playGame () {
       },
       audios: {
         effects: {
-          punch: new Audio('../sounds/punch.wav'),
-          gettingHit: new Audio('../sounds/getting_hit.wav'),
-          coin: new Audio('../sounds/coin.wav'),
-          failure: new Audio('../sounds/mocking_failure.wav'),
-          gameOver: new Audio('../sounds/game_over.wav'),
+          punch: new Audio('./sounds/punch.wav'),
+          gettingHit: new Audio('./sounds/getting_hit.wav'),
+          coin: new Audio('./sounds/coin.wav'),
+          failure: new Audio('./sounds/mocking_failure.wav'),
+          gameOver: new Audio('./sounds/game_over.wav'),
+          deny: new Audio('./sounds/deny.flac')
         },
         songs: {
-          gameplay: new Audio('../sounds/gameplay.wav'),
+          gameplay: new Audio('./sounds/gameplay.wav'),
         },
       },
       control : {

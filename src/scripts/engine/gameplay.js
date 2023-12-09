@@ -35,6 +35,7 @@ export function moveEnemy(state) {
 
 export function hit(state, hitSquareId) {
   if(!state.values.control.isLockedPanel) {
+    console.log(state.values.control.isLockedPanel)
   // aumentar o tempo
   addSecondsToStopWatch(state, 3)
   // aumentar a pontuação
@@ -54,9 +55,9 @@ export function hit(state, hitSquareId) {
   if(newSpeed>0) {
     state.values.speed = newSpeed
   }
-
   } else {
-    // disparar som de deny aqui
+    state.values.audios.effects.deny.volume=0.2
+    state.values.audios.effects.deny.play()
   }
 
 }
@@ -84,14 +85,14 @@ export function failed(state) {
         state.values.audios.effects.failure.play()
     }
   } else {
-    // disparar som de deny aqui
+    state.values.audios.effects.deny.volume=0.2
+    state.values.audios.effects.deny.play()
   }
 }
 
 
 export async function gameOver(state) {
   clearInterval(state.values.hitBoxTimer)
-
 
   handleEndGame(state)
   stopAllSounds(state)
@@ -104,7 +105,7 @@ export function lockPanel(state) {
   state.values.control.isLockedPanel = true;
 }
 
-export function unlockPanel (state) {
+export function unlockPanel(state) {
   state.values.control.isLockedPanel = false;
 }
 
