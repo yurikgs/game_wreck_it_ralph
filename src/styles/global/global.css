@@ -13,3 +13,7 @@
 .square:active {
   cursor: url('../../images/boxing_glove_128.png'), auto;
 }
+
+.background-image-none {
+  background-image: none;
+}
